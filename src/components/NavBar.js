@@ -38,13 +38,16 @@ const NavBar = () => {
             <ul className="hidden md:flex">
 
                 {links.map(({ id, link }) => (
-                    <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">{link}</li>
+                    <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 group">
+                        {link}
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-500 transition-all duration-200 group-hover:w-full"></span>
+                    </li>
                 ))}
 
             </ul>
             {/*Mobile Version Design */}
             {/*this is where we show the 3 bar icon */}
-            {/*on click, change the state to opposite */}{/*something clickabel, padding right, always on top, text color */}
+            {/*on click, change the state to opposite */}{/*something clickable, padding right, always on top, text color */}
             <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden">
                 {/* if nav is true, show FaTimes of size 30, else it will be the bars*/}
                 {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
@@ -53,7 +56,8 @@ const NavBar = () => {
             {/*if nav is true, then only show the menu the following way */}
             {nav && (
 
-                <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+                <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen 
+                bg-gradient-to-b from-black to-gray-800 text-gray-500">
 
                     {links.map(({ id, link }) => (
                         <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">{link}</li>
