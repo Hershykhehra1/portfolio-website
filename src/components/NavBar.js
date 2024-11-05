@@ -1,32 +1,17 @@
-import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const NavBar = () => {
-
     const [nav, setNav] = useState(false);
 
     const links = [
-        {
-            id: 1,
-            link: 'home'
-        },
-        {
-            id: 2,
-            link: 'About'
-        },
-        {
-            id: 3,
-            link: 'Portfolio'
-        },
-        {
-            id: 4,
-            link: 'Experience'
-        },
-        {
-            id: 5,
-            link: 'Contact'
-        }
-    ]
+        { id: 1, link: 'home' },
+        { id: 2, link: 'about' },
+        { id: 3, link: 'skills' },
+        { id: 4, link: 'portfolio', offset: -80 },
+        { id: 5, link: 'contact' },
+    ];
 
     return (
         <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
@@ -34,17 +19,18 @@ const NavBar = () => {
                 <h1 className="text-5xl font-signature ml-2">H.K</h1>
             </div>
 
-            {/* Website Design */}
+            {/* Desktop Navigation */}
             <ul className="hidden md:flex">
-
-                {links.map(({ id, link }) => (
+                {links.map(({ id, link, offset }) => (
                     <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 group">
-                        {link}
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-500 transition-all duration-200 group-hover:w-full"></span>
+                        <Link to={link} smooth duration={500} offset={offset || 0}>
+                            {link}
+                        </Link>
                     </li>
                 ))}
-
             </ul>
+
             {/*Mobile Version Design */}
             {/*this is where we show the 3 bar icon */}
             {/*on click, change the state to opposite */}{/*something clickable, padding right, always on top, text color */}
@@ -55,19 +41,18 @@ const NavBar = () => {
 
             {/*if nav is true, then only show the menu the following way */}
             {nav && (
-
-                <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen 
-                bg-gradient-to-b from-black to-gray-800 text-gray-500">
-
-                    {links.map(({ id, link }) => (
-                        <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">{link}</li>
+                <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+                    {links.map(({ id, link, offset }) => (
+                        <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
+                            <Link to={link} smooth duration={500} offset={offset || 0} onClick={() => setNav(false)}>
+                                {link}
+                            </Link>
+                        </li>
                     ))}
-
                 </ul>
             )}
-
         </div>
-    )
-}
+    );
+};
 
-export default NavBar
+export default NavBar;
