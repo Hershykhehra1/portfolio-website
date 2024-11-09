@@ -77,8 +77,8 @@ const Skills = () => {
                 {sections.map((section, index) => (
                     <motion.div
                         key={index}
-                        initial={{ y: 100, opacity: 0 }} // Start from below
-                        whileInView={{ y: 0, opacity: 1 }} // Animate to position
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         className="mb-12"
                     >
