@@ -29,7 +29,7 @@ const Portfolio = () => {
             title: "Portfolio Website",
             description: "This portfolio website is designed to highlight and display my computer science skills.",
             technologies: ["React", "Javascript", "HTML", "Tailwind CSS"],
-            link: "https://github.com/Hershykhehra1/Landmarks-App"
+            link: "https://github.com/Hershykhehra1/portfolio-website"
         },
         {
             id: 4,
