@@ -8,7 +8,7 @@ const About = () => {
                     <p className="text-4xl font-bold inline border-b-4 border-gray-500">About</p>
                 </div>
                 <p className="text-xl mt-20">
-                    Hi there, My name is Harshaun Khehra and I am a senior Computer Science student at California State University, Los Angeles.
+                    Hi there, my name is Harshaun Khehra and I am a senior Computer Science student at California State University, Los Angeles.
                     I am a aspiring software developer and web designer dedicated to creating appealing websites. I have a strong foundation with
                     a wide range of front-end  and back-end technologies. I enjoy transforming ideas into interactive expreinces with style. Feel
                     free to explore my portfolio and get in touch with me, lets build something amazing!
