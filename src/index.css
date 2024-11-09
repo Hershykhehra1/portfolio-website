@@ -14,7 +14,6 @@
 
   body {
     overflow-x: hidden;
-    /* Prevents horizontal scrolling */
     margin: 0;
     padding: 0;
   }
@@ -29,47 +28,19 @@
     box-sizing: border-box;
   }
 
-  /* Ensuring no overflow occurs */
-  .flex,
-  .max-w-screen-lg,
-  .h-screen,
-  .px-4 {
-    overflow-x: hidden;
-    max-width: 100%;
-    /* Ensures the element does not exceed the viewport width */
-  }
-
-  /* Media Query for Small Screens */
   @media (max-width: 640px) {
 
-    /* Ensure elements are responsive on mobile */
     .max-w-screen-lg {
       width: 100%;
-      overflow-x: hidden;
     }
 
     .h-screen {
       height: auto;
-      /* Prevents full screen height that might overflow */
     }
 
     .px-4 {
       padding-left: 16px;
       padding-right: 16px;
-      /* Adjusts padding to avoid overflow */
-    }
-
-    /* Prevent horizontal overflow by making images responsive */
-    img {
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-      /* Keep aspect ratio of images */
-    }
-
-    /* Ensures the layout does not overflow */
-    .w-full {
-      width: 100%;
     }
   }
 }
