@@ -12,12 +12,40 @@
     font-family: "Raleway", sans-serif;
   }
 
-  html,
-  body,
-  #root,
-  .app {
-    height: 100%;
-    background-color: #010026;
-    @apply text-white;
+  body {
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+    margin: 0;
+    padding: 0;
   }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 640px) {
+
+    /* Ensure elements are responsive on mobile */
+    .max-w-screen-lg {
+      width: 100%;
+    }
+
+    .h-screen {
+      height: auto;
+      /* Prevents full screen height that might overflow */
+    }
+
+    .px-4 {
+      padding-left: 16px;
+      padding-right: 16px;
+      /* Adjusts padding to avoid overflow */
+    }
+  }
+
 }
