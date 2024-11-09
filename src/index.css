@@ -38,7 +38,6 @@
   }
 
   @media (max-width: 640px) {
-
     .max-w-screen-lg {
       width: 100%;
     }
@@ -53,9 +52,15 @@
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       object-fit: contain;
+      border-radius: 1rem;
+      max-width: none;
+    }
+
+    .flex-col {
+      flex-direction: column;
     }
 
     .w-full {
