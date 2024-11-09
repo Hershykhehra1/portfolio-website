@@ -11,4 +11,11 @@
   html {
     font-family: "Raleway", sans-serif;
   }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
 }
