@@ -8,32 +8,40 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: "Raleway", sans-serif;
-  }
-
-  body {
-    overflow-x: hidden;
-    /* Prevents horizontal scrolling */
-    margin: 0;
-    padding: 0;
-  }
 
   html,
   body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
     width: 100%;
     height: 100%;
+    /* Prevents height overflow */
   }
 
   * {
     box-sizing: border-box;
   }
 
-  @media (max-width: 640px) {
+  /* Prevent any child elements from causing overflow */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 
-    /* Ensure elements are responsive on mobile */
+  /* Ensure the body doesn't exceed viewport width */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Ensuring proper scaling on smaller screens */
+  @media (max-width: 640px) {
     .max-w-screen-lg {
       width: 100%;
+      overflow-x: hidden;
     }
 
     .h-screen {
@@ -48,4 +56,27 @@
     }
   }
 
+  /* Fix any unwanted horizontal scrolling for flex containers */
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap elements instead of overflowing */
+  }
+
+  /* Prevent any specific elements like images or videos from overflowing */
+  img,
+  video {
+    max-width: 100%;
+    /* Ensure images don't overflow */
+    height: auto;
+    /* Keep aspect ratio */
+  }
+
+  /* Global reset to prevent unwanted margins */
+  .container,
+  .wrapper {
+    max-width: 100%;
+    /* Prevent container overflow */
+    overflow-x: hidden;
+  }
 }
