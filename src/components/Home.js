@@ -7,11 +7,20 @@ const Home = () => {
     return (
         <div
             name="home"
-            className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 overflow-hidden" // Prevent horizontal scrolling
+            className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 overflow-x-hidden" // Prevent horizontal scrolling
         >
             <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-                {/* Text Content on the Left */}
-                <div className="flex flex-col justify-center h-full md:w-1/2">
+                {/* Profile Picture on Top for Mobile and on the Right for Larger Screens */}
+                <div className="flex justify-center mb-8 md:mb-0 md:w-1/2 md:order-2 mt-48 md:mt-0">
+                    <img
+                        src={HeroImage}
+                        alt="my profile"
+                        className="rounded-2xl mx-auto w-3/4 sm:w-4/5 md:w-4/5"  // Increased size for mobile, kept the same size for tablets and desktops
+                    />
+                </div>
+
+                {/* Text Content on the Left for Mobile and on the Right for Larger Screens */}
+                <div className="flex flex-col justify-center h-full md:w-1/2 md:order-1">
                     <h2 className="text-4xl sm:text-7xl font-bold text-white">Harshaun Khehra</h2>
                     <p className="text-gray-500 py-4 max-w-md">
                         Senior Computer Science Student at Cal State LA. Let's Chat!
@@ -31,14 +40,8 @@ const Home = () => {
                         </Link>
                     </div>
                 </div>
-
-                {/* Profile Picture on the Right */}
-                <div className="flex justify-center md:w-1/2">
-                    <img src={HeroImage} alt="my profile" className="rounded-2xl w-2/3 md:w-4/5" />
-                </div>
             </div>
         </div>
     );
 };
-
 export default Home;
