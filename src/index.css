@@ -12,10 +12,12 @@
     font-family: "Raleway", sans-serif;
   }
 
-  body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+  html,
+  body,
+  #root,
+  .app {
+    height: 100%;
+    background-color: #010026;
+    @apply text-white;
   }
-
 }
