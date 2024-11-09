@@ -29,7 +29,15 @@
     box-sizing: border-box;
   }
 
-
+  /* Ensure no sideways scrolling */
+  .container,
+  .max-w-screen-lg,
+  .h-screen,
+  .px-4,
+  .w-full {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
   @media (max-width: 640px) {
     .max-w-screen-lg {
