@@ -22,10 +22,15 @@ const NavBar = () => {
             {/* Desktop Navigation */}
             <ul className="hidden md:flex">
                 {links.map(({ id, link, offset }) => (
-                    <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+                    <li
+                        key={id}
+                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 relative group"
+                    >
                         <Link to={link} smooth duration={500} offset={offset || 0}>
                             {link}
                         </Link>
+                        {/* Underline highlight effect */}
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-500 transition-all duration-200 group-hover:w-full"></span>
                     </li>
                 ))}
             </ul>
@@ -42,16 +47,20 @@ const NavBar = () => {
             {nav && (
                 <ul className="flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 z-40">
                     {links.map(({ id, link, offset }) => (
-                        <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
+                        <li
+                            key={id}
+                            className="px-4 cursor-pointer capitalize py-6 text-4xl relative group"
+                        >
                             <Link
                                 to={link}
                                 smooth
                                 duration={500}
                                 offset={offset || 0}
-                                onClick={() => setNav(false)}  // Close menu on link click
+                                onClick={() => setNav(false)}
                             >
                                 {link}
                             </Link>
+                            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gray-500 transition-all duration-200 group-hover:w-full"></span>
                         </li>
                     ))}
                 </ul>
