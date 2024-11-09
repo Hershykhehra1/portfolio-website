@@ -37,7 +37,24 @@
     overflow-x: hidden;
   }
 
-  /* Ensuring proper scaling on smaller screens */
+  /* Flex container adjustments */
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Prevent horizontal overflow by wrapping elements */
+  }
+
+  /* Make sure images are responsive and don't overflow */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+    /* Keep aspect ratio */
+    object-fit: contain;
+    /* Ensure the image fits within the container */
+  }
+
+  /* Ensuring proper scaling and padding on smaller screens */
   @media (max-width: 640px) {
     .max-w-screen-lg {
       width: 100%;
@@ -46,7 +63,7 @@
 
     .h-screen {
       height: auto;
-      /* Prevents full screen height that might overflow */
+      /* Prevent full screen height that might overflow */
     }
 
     .px-4 {
@@ -54,29 +71,21 @@
       padding-right: 16px;
       /* Adjusts padding to avoid overflow */
     }
-  }
 
-  /* Fix any unwanted horizontal scrolling for flex containers */
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    /* Wrap elements instead of overflowing */
-  }
+    /* Ensure the profile image remains visible */
+    .rounded-2xl {
+      width: 100%;
+      /* Ensure the profile picture fits within the container */
+      max-width: 90%;
+      /* Prevents image from stretching too much */
+      margin: 0 auto;
+      /* Center the image */
+    }
 
-  /* Prevent any specific elements like images or videos from overflowing */
-  img,
-  video {
-    max-width: 100%;
-    /* Ensure images don't overflow */
-    height: auto;
-    /* Keep aspect ratio */
-  }
-
-  /* Global reset to prevent unwanted margins */
-  .container,
-  .wrapper {
-    max-width: 100%;
-    /* Prevent container overflow */
-    overflow-x: hidden;
+    /* Ensure skill boxes are responsive and don't overflow */
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      /* Make sure skill boxes resize based on screen width */
+    }
   }
 }
