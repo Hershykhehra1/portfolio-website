@@ -65,7 +65,7 @@ const Skills = () => {
     ];
 
     return (
-        <div name="skills" className="bg-gradient-to-b from-black to-gray-800 w-full text-white pt-24 pb-20 md:min-h-[120vh]"> {/* Increased min-h and added pb-20 */}
+        <div name="skills" className="bg-gradient-to-b from-black to-gray-800 w-full text-white pt-32 pb-32 md:min-h-[130vh]">
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
                 <div className="pb-6">
                     <p className="text-4xl font-bold inline border-b-4 border-gray-500">
@@ -80,10 +80,10 @@ const Skills = () => {
                         initial={{ y: 100, opacity: 0 }} // Start from below
                         whileInView={{ y: 0, opacity: 1 }} // Animate to position
                         transition={{ duration: 0.5 }}
-                        className="mb-8"
+                        className="mb-12"
                     >
-                        <h3 className="text-2xl font-bold text-center mb-4">{section.title}</h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <h3 className="text-2xl font-bold text-center mb-6">{section.title}</h3>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
                             {section.skills.map(({ id, src, name, style }) => (
                                 <div key={id} className={`flex flex-col items-center bg-gray-900 p-4 rounded-lg shadow-lg ${style} transition-transform duration-300 transform hover:scale-105`}>
                                     <img src={src} alt={name} className="w-16 h-16 mb-2" />
@@ -95,6 +95,7 @@ const Skills = () => {
                 ))}
             </div>
         </div>
+
     );
 };
 

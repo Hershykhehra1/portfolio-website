@@ -8,19 +8,10 @@ const About = () => {
                     <p className="text-4xl font-bold inline border-b-4 border-gray-500">About</p>
                 </div>
                 <p className="text-xl mt-20">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                </p>
-
-                <br />
-
-                <p className="text-xl">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    Hi there, My name is Harshaun Khehra and I am a senior Computer Science student at California State University, Los Angeles.
+                    I am a aspiring software developer and web designer dedicated to creating appealing websites. I have a strong foundation with
+                    a wide range of front-end  and back-end technologies. I enjoy transforming ideas into interactive expreinces with style. Feel
+                    free to explore my portfolio and get in touch with me, lets build something amazing!
                 </p>
             </div>
         </div>

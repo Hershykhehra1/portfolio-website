@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import BookExchangeSystem from '../assets/portfolio/BES.gif';
 import recipeWebsite from '../assets/portfolio/RecipeWebsite.png';
-import LandmarksApp from '../assets/portfolio/landmarksApp.png';
+import portfolio from '../assets/portfolio/Portfolio.png';
 import spaceInvaders from '../assets/portfolio/spaceInvaders.gif';
 
 const Portfolio = () => {
@@ -11,7 +11,7 @@ const Portfolio = () => {
             id: 1,
             src: BookExchangeSystem,
             title: "Full Stack Book Management System",
-            description: "...",
+            description: "A full-stack book management system allowing users to log in, post books, view a gallery, add comments and ratings, mark favorites, and search for books.",
             technologies: ["Django", "Python", "CSS", "HTML"],
             link: "https://github.com/Hershykhehra1/Book-Exchange-System"
         },
@@ -19,23 +19,23 @@ const Portfolio = () => {
             id: 2,
             src: recipeWebsite,
             title: "Full Stack Recipe Website",
-            description: "...",
+            description: "A full-stack recipe website with user authentication, enabling users to add, edit, and delete their own recipes. Data is securely stored in a MySQL database, with permissions to prevent unauthorized changes to others' recipes.",
             technologies: ["Java", "SpringBoot", "HTML", "Javascript"],
             link: "https://github.com/Hershykhehra1/Recipe_Website"
         },
         {
             id: 3,
-            src: LandmarksApp,
-            title: "Swift UI Landmarks Application",
-            description: "...",
-            technologies: ["Swift"],
+            src: portfolio,
+            title: "Portfolio Website",
+            description: "This portfolio website is designed to highlight and display my computer science skills.",
+            technologies: ["React", "Javascript", "HTML", "Tailwind CSS"],
             link: "https://github.com/Hershykhehra1/Landmarks-App"
         },
         {
             id: 4,
             src: spaceInvaders,
             title: "Space Invader Game",
-            description: "...",
+            description: "A classic Space Invaders game built with Python and Pygame, featuring object-oriented design, smooth animations, and interactive gameplay. Demonstrates skills in game development, collision detection, and responsive controls.",
             technologies: ["Python", "Pygame"],
             link: "https://github.com/Hershykhehra1/Space_Invaders_Game"
         }
